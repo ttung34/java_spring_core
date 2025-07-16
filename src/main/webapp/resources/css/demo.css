@@ -1,0 +1,42 @@
+.form
+{
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+
+}
+.create 
+{
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.email{
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.box_email
+{
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.button 
+{
+    margin-top: 10px;
+    border-radius: 5px;
+    width: 80px;
+    height: 40px;
+    background-color: 4c7da8;
+    color: white;
+    border: 0;
+}
+
