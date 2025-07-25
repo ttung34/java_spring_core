@@ -28,4 +28,13 @@ public class userService {
         System.out.println("eric" + eric);
         return eric;
     }
+
+    public User getUserById(long id) {
+        return this.userRepository.findById(id);
+    }
+
+    public void deleteUserById(long id) {
+        this.userRepository.deleteById(id);
+    }
+    
 }

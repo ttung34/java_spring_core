@@ -21,23 +21,23 @@
             <form:form action="/admin/user/create" method="post" modelAttribute="newUser">
                 <div class="mb-3">
                     <label class="form-label fw-bold">Email</label>
-                    <form:input type="email" class="form-control" placeholder="Nhập email vào đây" path="email"/>
+                    <form:input type="email" class="form-control" placeholder="Nhập email vào đây" path="email" required="required"/>
                 </div>
                 <div class="mb-3">
                     <label class="form-label fw-bold">Password</label>
-                    <form:input type="password" class="form-control" placeholder="Nhập mật khẩu vào đây" path="password"/>
+                    <form:input type="password" class="form-control" placeholder="Nhập mật khẩu vào đây" path="password" required="required"/>
                 </div>
                 <div class="mb-3">
                     <label class="form-label fw-bold">Full name</label>
-                    <form:input type="text" class="form-control" placeholder="Nhập họ tên vào đây" path="fullName"/>
+                    <form:input type="text" class="form-control" placeholder="Nhập họ tên vào đây" path="fullName" required="required"/>
                 </div>
                 <div class="mb-3">
                     <label class="form-label fw-bold">Address</label>
-                    <form:input type="text" class="form-control" placeholder="Nhập địa chỉ vào đây" path="address"/>
+                    <form:input type="text" class="form-control" placeholder="Nhập địa chỉ vào đây" path="address" required="required"/>
                 </div>
                 <div class="mb-3">
                     <label class="form-label fw-bold">Phone number</label>
-                    <form:input type="tel" class="form-control" placeholder="Nhập số điện thoại vào đây" path="phoneNumber"/>
+                    <form:input type="tel" class="form-control" placeholder="Nhập số điện thoại vào đây" path="phoneNumber" required="required"/>
                 </div>
                 <button class="btn text-white" style="background-color: #4c7da8; border-radius: 5px; width: 80px; height: 40px;">
                     Create
