@@ -1,12 +1,18 @@
 package vn.hoidanit.laptopshop.domain;
 
+import java.util.List;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
 
 @Entity
-// @Table(name = "admin")
+@Table(name = "user")
 public class User {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
@@ -16,9 +22,23 @@ public class User {
     private String fullName;
     private String address;
     private String phoneNumber;
+    private String avatar;
 
-    
-    
+    // roleId
+    // nhiều user thì có thể thuộc cùng một role
+    @ManyToOne
+    @JoinColumn(name = "role_id")
+    private Role role;
+
+    @OneToMany(mappedBy = "user")
+    List<Order> order;
+
+
+    public String getAvatar() {
+        return avatar;
+    }
+
+
     public long getId() {
         return id;
     }
@@ -81,6 +101,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "User [id=" + id + ", email =" + email + ", password =" + password + ", fullName ="+ fullName +", address ="+ address +", phoneNumber =" + phoneNumber +" ]";
+        return "User [id=" + id + ", email=" + email + ", password=" + password + ", fullName=" + fullName
+                + ", address=" + address + ", phoneNumber=" + phoneNumber + ", avatar=" + avatar + "]";
     }
 }
